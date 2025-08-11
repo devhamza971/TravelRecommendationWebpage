@@ -333,3 +333,28 @@ p {
 #contactSection button:hover {
     background-color: #06c;
 }
+
+@media (max-width: 768px) {
+  .main-page {
+    flex-direction: column; /* stack vertically on small screens */
+    padding-left: 10px;     /* no large left gap on mobile */
+  }
+
+  .search-results {
+    order: -1;              /* show above the content when visible */
+    width: auto;
+    max-width: 100%;
+    flex: none;
+    margin: 0 10px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .socials {
+    top: auto;
+    bottom: 12px;          /* move socials to bottom on small screens */
+    left: 12px;
+  }
+}
