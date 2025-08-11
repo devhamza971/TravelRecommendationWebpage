@@ -347,14 +347,4 @@ p {
     flex: none;
     margin: 0 10px;
   }
-
-  .content {
-    padding: 20px;
-  }
-
-  .socials {
-    top: auto;
-    bottom: 12px;          /* move socials to bottom on small screens */
-    left: 12px;
-  }
 }
