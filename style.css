@@ -10,12 +10,18 @@ body {
 } 
 
 header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(2, 38, 73, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+.main-page {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: rgba(2, 38, 73, 0.85);
-    backdrop-filter: blur(12px);
 }
 
 .logo-container {
@@ -81,20 +87,13 @@ header {
     transform: scale(1.1);
 }
 
+/* popup anchored to the search bar */
 .search-results {
-    position: absolute;
-    top: 80px;
-    right: 40px;
-    width: 320px;
-    background-color: rgba(2, 38, 73, 0.85);
-    color: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    z-index: 99;
-    max-height: 500px;
-    overflow-y: auto;
-    display: none;
+  width: 200px;
+  background-color: rgba(2, 38, 73, 0.95);
+  border-radius: 12px;
+  padding: 12px;
+  margin: 12px;
 }
 
 .result-card {
@@ -138,10 +137,34 @@ header {
     background-color: #1d539a;
 }
 
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch;   /* Make them take full width */
+    gap: 10px;
+  }
+
+  .nav-tabs {
+    flex-wrap: wrap;        /* Allow nav links to wrap */
+    justify-content: center;
+  }
+
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    width: 100%;            /* Full width for search bar */
+  }
+
+  .search-bar input {
+    width: 90%;             /* Fit inside screen */
+    max-width: 400px;
+  }
+}
+
 .socials {
     position: fixed;
     top: 40%;
-    left: 30px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -167,7 +190,7 @@ header {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 35px;
     margin-bottom: 20px;
 }
 
@@ -198,8 +221,8 @@ p {
     background-color: rgba(2, 38, 73, 0.85);
     backdrop-filter: blur(12px);
     color: white;
-    padding: 60px 40px;
-    margin: 40px 100px;
+    padding: 30px;
+    margin: 40px 70px;
     border-radius: 20px;
 }
 
@@ -234,12 +257,11 @@ p {
     
 #contactSection {
     display: none;
-    padding: 60px 40px;
+    padding: 30px;
     max-width: 600px;
-    margin: 40px 100px;
+    margin: 40px 70px;
     background: rgba(2, 38, 73, 0.85);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 51, 102, 0.3);
     color: #fff;
