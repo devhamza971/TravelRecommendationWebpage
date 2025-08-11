@@ -35,8 +35,8 @@ header {
 .search-results {
   display: none;        /* Important: hidden until search shows results */
   order: 0;             /* make sure results appear before .content in the flex row */
-  flex: 0 0 320px;      /* fixed left-column width on desktop */
-  width: 320px;
+  flex: 0 0 600px;      /* fixed left-column width on desktop */
+  width: 600px;
   max-width: 40%;
   background-color: rgba(2, 38, 73, 0.95);
   border-radius: 12px;
