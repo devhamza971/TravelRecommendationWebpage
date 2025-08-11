@@ -30,32 +30,6 @@ header {
   flex-wrap: nowrap;
 }
 
-.search-results {
-  display: none; /* Hidden until needed */
-  position: fixed; /* Make it cover the whole viewport */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  
-  /* Centering content inside */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: rgba(2, 38, 73, 0.95); /* Semi-transparent overlay */
-  border-radius: 0; /* Remove rounded corners to fill screen */
-  padding: 20px;
-  margin: 0;
-  z-index: 1100; /* On top of everything */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-}
-
-.search-results > * {
-  max-width: 800px; /* Optional: limit content width */
-  width: 90%; /* Responsive */
-}
-
 /* ====== REPLACE .content ====== */
 .content {
   order: 1;             /* appear after .search-results */
@@ -63,6 +37,20 @@ header {
   padding: 80px 40px;
   max-width: 800px;     /* keep a readable line length */
   margin-left: 0;       /* remove the old left-margin so it doesn't drop below */
+}
+
+.search-results {
+  display: none;        /* Important: hidden until search shows results */
+  order: 0;             /* make sure results appear before .content in the flex row */
+  flex: 0 0 320px;      /* fixed left-column width on desktop */
+  width: 320px;
+  max-width: 40%;
+  background-color: rgba(2, 38, 73, 0.95);
+  border-radius: 12px;
+  padding: 15px;
+  margin: 0;
+  z-index: 1100;        /* above socials so results are visible */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
 }
 
 /* ====== REPLACE .socials ====== */
