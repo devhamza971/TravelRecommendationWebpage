@@ -239,7 +239,7 @@ p {
     backdrop-filter: blur(12px);
     color: white;
     padding: 30px;
-    margin: 35px;
+    margin:50px;
     border-radius: 20px;
 }
 
@@ -276,7 +276,7 @@ p {
     display: none;
     padding: 30px;
     max-width: 600px;
-    margin: 35px;
+    margin: 50px;
     background: rgba(2, 38, 73, 0.85);
     backdrop-filter: blur(12px);
     border-radius: 20px;
