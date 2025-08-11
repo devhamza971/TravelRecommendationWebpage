@@ -239,7 +239,7 @@ p {
     backdrop-filter: blur(12px);
     color: white;
     padding: 30px;
-    margin: 40px 70px;
+    margin: 35px;
     border-radius: 20px;
 }
 
@@ -276,7 +276,7 @@ p {
     display: none;
     padding: 30px;
     max-width: 600px;
-    margin: 40px 70px;
+    margin: 35px;
     background: rgba(2, 38, 73, 0.85);
     backdrop-filter: blur(12px);
     border-radius: 20px;
@@ -338,7 +338,7 @@ p {
   .main-page {
     flex-direction: column; /* stack vertically on small screens */
     padding-left: 20px;  
-    margin: 20px;
+    margin: 25px;
   }
 
   .search-results {
