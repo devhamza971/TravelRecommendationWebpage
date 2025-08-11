@@ -337,7 +337,7 @@ p {
 @media (max-width: 768px) {
   .main-page {
     flex-direction: column; /* stack vertically on small screens */
-    padding-left: 10px;     /* no large left gap on mobile */
+    padding-left: 20px;     /* no large left gap on mobile */
   }
 
   .search-results {
